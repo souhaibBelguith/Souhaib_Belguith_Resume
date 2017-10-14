@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/souhaibBelguith/Souhaib_Belguith_Resume/issues"
   },
-  "homepage": "https://github.com/souhaibBelguith/Souhaib_Belguith_Resume#readme"
+  "homepage": "https://github.com/souhaibBelguith/Souhaib_Belguith_Resume#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",

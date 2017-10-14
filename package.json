@@ -1,0 +1,28 @@
+{
+  "name": "souhaib",
+  "version": "1.0.0",
+  "description": "souhaib's resume",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souhaibBelguith/Souhaib_Belguith_Resume.git"
+  },
+  "keywords": [
+    "resume"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/souhaibBelguith/Souhaib_Belguith_Resume/issues"
+  },
+  "homepage": "https://github.com/souhaibBelguith/Souhaib_Belguith_Resume#readme"
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "request": "^2.78.0"
+  },
+  "devDependencies": {}
+}

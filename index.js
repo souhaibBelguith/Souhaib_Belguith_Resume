@@ -19,6 +19,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 // Index route
-app.get('/resume', function (req, res) {
-    res.send("index.html",{root:__dirname})
-})
+
+app.get('/', function(req, res) {
+    res.render('index.html',{root:__dirname}); 
+});

@@ -18,7 +18,7 @@ app.use(bodyParser.json())
 
 // Index route
 
-app.get('/resume', function(req, res) {
+app.get('/', function(req, res) {
     res.render('index.html',{root:__dirname}); 
 	
 });

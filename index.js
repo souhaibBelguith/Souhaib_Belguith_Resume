@@ -4,6 +4,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
 const app=express()
+app.use(express.static(__dirname + '../public'));
 
 app.set('port', (process.env.PORT || 5000))
 
@@ -22,4 +23,5 @@ app.use(bodyParser.json())
 
 app.get('/resume', function(req, res) {
     res.render('index.html',{root:__dirname}); 
+	app.use(express.static(__dirname + '../resume'));
 });

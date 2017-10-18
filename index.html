@@ -625,14 +625,132 @@
 		<!-- Owl carousel js file -->
 		<script src="js/owl.carousel.min.js"></script>
 		<!-- Google Map -->
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJOx2cEs3x3dTSubqABijclN_3uEmL7f8"></script>
+		<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPzS8b60xcuektRVnf6T1BEuTEYX75KDo&callback=initMap">
+		</script>
+		<!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJOx2cEs3x3dTSubqABijclN_3uEmL7f8"></script>-->
 		<!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> -->
 		<!-- Custom file  -->
 		<script src="js/plugins.js"></script>
-		<!-- Wow.js file -->
-		<script src="js/wow.min.js"></script>
-		<script>
+		<!-- Wow.js file  <script>
 			new WOW().init();
 		</script>
-	</body>
+		<script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+		-->
+		<script src="js/wow.min.js"></script>
+		
+		
+		
+			
+<div id="map"></div>
+    <script>
+      function initMap() {
+        // Styles a map in night mode.
+		var uluru = {lat: 36.862499, lng: 10.195556};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 36.862499, lng: 10.195556},
+          zoom: 8,
+          styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+        });
+		var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    
+    
+    
 </html>
+

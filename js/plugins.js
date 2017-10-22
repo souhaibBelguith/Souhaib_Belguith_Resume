@@ -158,16 +158,16 @@ URL: https://themeforest.net/user/ahmedbeheiry
 	----------------------------------------------------- */
 	$("#facts").appear(function() {
 		$("#number_1").animateNumber({
-			number: 6853	// Change to your number			
+			number: 68532	// Change to your number			
 		}, 2200);
 		$("#number_2").animateNumber({
-			number: 120		// Change to your number	
+			number: 70		// Change to your number	
 		}, 2200);
 		$("#number_3").animateNumber({
-			number: 345		// Change to your number
+			number: 3459		// Change to your number
 		}, 2200);
 		$("#number_4").animateNumber({
-			number: 195		// Change to your number
+			number: 60		// Change to your number
 		}, 2200);
 	}, {
 		accX: 0,
@@ -193,7 +193,7 @@ URL: https://themeforest.net/user/ahmedbeheiry
 			number: 88		// Change to your number
 		}, 1500);
 		$("#chart_num_2").animateNumber({
-			number: 95		// Change to your number
+			number: 80		// Change to your number
 		}, 1500);
 		$("#chart_num_3").animateNumber({
 			number: 73		// Change to your number

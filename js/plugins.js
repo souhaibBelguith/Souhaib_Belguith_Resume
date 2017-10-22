@@ -323,10 +323,10 @@ function init() {
 	// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
 	var mapOptions = {
 		// How zoomed in you want the map to start at (always required)
-		zoom: 17,
+		zoom: 9,
 
-		// The latitude and longitude to center the map (always required)
-		center: new google.maps.LatLng(30.609788, 32.268555),	// Change to your latitude & longitude
+		// The latitude and longitude to center the map (always required){lat: 36.862499, lng: 10.195556}
+		center: new google.maps.LatLng(36.862499, 10.195556),	// Change to your latitude & longitude
 
 		scrollwheel: false,
 
@@ -454,14 +454,14 @@ function init() {
 
 	// Let"s also add a marker while we"re at it
 	var marker = new google.maps.Marker({
-		position: new google.maps.LatLng(30.609788, 32.268555),	// Change to your latitude & longitude
+		position: new google.maps.LatLng(36.862499, 10.195556),	// Change to your latitude & longitude
 		/* animation:google.maps.Animation.BOUNCE, Make the marker bounce */
 		map: map,
-		title: "Marqa Studio"		// Change to your text
+		title: "Souhaib Belguith"		// Change to your text
 	});
 
 	var infowindow = new google.maps.InfoWindow({
-		content: "Marqa Studio"		// Change to your text
+		content: "Souhaib Belguith"		// Change to your text
 	});
 
 	google.maps.event.addListener(marker, "click", function() {

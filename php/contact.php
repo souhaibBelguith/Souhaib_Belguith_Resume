@@ -64,14 +64,14 @@ if(isset($_POST['mail'])) {
     $mail_message .= "mail: ".clean_string($mail_from)."\n";
     $mail_message .= "message: ".clean_string($message)."\n";
  
-// create mail headers
+// create mail headers// <!-- include your own success html here -->
 $headers = 'From: '.$mail_from."\r\n".
 'Reply-To: '.$mail_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
 @mail($mail_to, $mail_subject, $mail_message, $headers);  
 ?>
  
-<!-- include your own success html here -->
+
  
 Thank you for contacting us. We will be in touch with you very soon.
  

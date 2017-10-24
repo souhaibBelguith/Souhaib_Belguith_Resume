@@ -14,7 +14,6 @@ $mail->Port = 587;                          // TCP port to connect to
 
 $mail->setFrom('sou.belguith@gmail.com', 'resume souhaib');
 $mail->addReplyTo('sou.belguith@gmail.com', 'resume souhaib reply');
-//$mail->addAddress('mohamedmouldi.slama@esprit.tn');   // Add a recipient
 $mail->isHTML(true);  // Set email format to HTML
 
 if(isset($_POST['mail']))
@@ -28,6 +27,11 @@ if(isset($_POST['mail']))
 
 $mail->Subject = 'Resume mail';
 $mail->Body    = $bodyContent;
+
+	echo $mail->addAddress;
+	echo $bodyContent;
+	echo $setFrom;
+	
 
 $mail->send();
 ?>

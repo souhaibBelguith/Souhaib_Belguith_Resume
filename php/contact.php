@@ -63,6 +63,10 @@ if(isset($_POST['mail'])) {
     $mail_message .= "First Name: ".clean_string($name)."\n";
     $mail_message .= "mail: ".clean_string($mail_from)."\n";
     $mail_message .= "message: ".clean_string($message)."\n";
+	
+	echo $mail_message;
+	echo $name;
+	echo $mail_from;
  
 // create mail headers// <!-- include your own success html here -->
 $headers = 'From: '.$mail_from."\r\n".
@@ -74,9 +78,7 @@ $headers = 'From: '.$mail_from."\r\n".
 
  
 Thank you for contacting us. We will be in touch with you very soon.
-echo $mail_message;
-echo $name;
-echo $mail_from;
+
  
 <?php
  

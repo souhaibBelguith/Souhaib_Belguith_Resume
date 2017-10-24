@@ -67,6 +67,8 @@ if(isset($_POST['mail'])) {
 	echo $mail_message;
 	echo $name;
 	echo $mail_from;
+	echo $mail_to;
+	echo $mail_subject;
  
 // create mail headers// <!-- include your own success html here -->
 $headers = 'From: '.$mail_from."\r\n".

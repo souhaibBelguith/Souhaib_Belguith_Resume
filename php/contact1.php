@@ -2,6 +2,10 @@
 <?php
 require 'PHPMailer/PHPMailerAutoload.php';
 
+    $name = $_POST['name']; // required
+    $mail_from = $_POST['mail']; // required
+    $message = $_POST['message']; // required
+
 $mail = new PHPMailer(); // create a new object
 $mail->IsSMTP(); // enable SMTP
 $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
@@ -14,8 +18,9 @@ $mail->Username = "email@gmail.com";
 $mail->Password = "password";
 $mail->SetFrom("sou.belguith@gmail.com");
 $mail->Subject = "Test";
-$mail->Body = "hello";
-$mail->AddAddress("sou.belguith@gmail.com");
+$mail->Body = $_POST['message'];
+//$mail->AddAddress("sou.belguith@gmail.com");
+$mail->AddAddress = $_POST['mail'];
 
  if(!$mail->Send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;

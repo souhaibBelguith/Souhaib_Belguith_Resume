@@ -2,36 +2,24 @@
 <?php
 require 'PHPMailer/PHPMailerAutoload.php';
 
-$mail = new PHPMailer;
+$mail = new PHPMailer(); // create a new object
+$mail->IsSMTP(); // enable SMTP
+$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+$mail->SMTPAuth = true; // authentication enabled
+$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+$mail->Host = "smtp.gmail.com";
+$mail->Port = 465; // or 587
+$mail->IsHTML(true);
+$mail->Username = "email@gmail.com";
+$mail->Password = "password";
+$mail->SetFrom("sou.belguith@gmail.com");
+$mail->Subject = "Test";
+$mail->Body = "hello";
+$mail->AddAddress("sou.belguith@gmail.com");
 
-$mail->isSMTP();                            // Set mailer to use SMTP
-$mail->Host = 'smtp.gmail.com';             // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                     // Enable SMTP authentication
-$mail->Username = '@gmail.com';          // SMTP username
-$mail->Password = ''; // SMTP password
-$mail->SMTPSecure = 'tls';                  // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587;                          // TCP port to connect to
-
-$mail->setFrom('sou.belguith@gmail.com', 'resume souhaib');
-$mail->addReplyTo('sou.belguith@gmail.com', 'resume souhaib reply');
-$mail->isHTML(true);  // Set email format to HTML
-
-if(isset($_POST['mail']))
-	
-	//$name = $_POST['name']; // required
-    //$mail_from = $_POST['mail']; // required
-    //$message = $_POST['message']; // required
-{
-	$mail->addAddress($_POST['mail'];);
-	$bodyContent = $_POST['message'];
-
-$mail->Subject = 'Resume mail';
-$mail->Body    = $bodyContent;
-
-	echo $mail->addAddress;
-	echo $bodyContent;
-	echo $setFrom;
-	
-
-$mail->send();
+ if(!$mail->Send()) {
+    echo "Mailer Error: " . $mail->ErrorInfo;
+ } else {
+    echo "Message has been sent";
+ }
 ?>

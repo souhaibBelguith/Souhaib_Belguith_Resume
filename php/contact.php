@@ -74,6 +74,9 @@ $headers = 'From: '.$mail_from."\r\n".
 
  
 Thank you for contacting us. We will be in touch with you very soon.
+echo $mail_message;
+echo $name;
+echo $mail_from;
  
 <?php
  

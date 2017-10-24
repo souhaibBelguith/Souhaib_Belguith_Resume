@@ -72,7 +72,7 @@ if(isset($_POST['mail'])) {
 $headers = 'From: '.$mail_from."\r\n".
 'Reply-To: '.$mail_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
-@mail($mail_to, $mail_subject, $mail_message, $headers);  
+mail($mail_to, $mail_subject, $mail_message, $headers);  
 ?>
  
 

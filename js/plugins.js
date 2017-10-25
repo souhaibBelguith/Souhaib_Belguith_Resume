@@ -283,7 +283,7 @@ URL: https://themeforest.net/user/ahmedbeheiry
 			// Ajax    
 			$.ajax({
 				type: "POST",
-				url: "php/contact1.php",
+				url: "php/contact.php",
 				data: "name=" + name + "&mail=" + mail + "&message=" + message,
 				beforeSend: function(text) {
 					submitBtn.html("Sending...");

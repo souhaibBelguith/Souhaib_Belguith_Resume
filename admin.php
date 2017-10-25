@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+
+// create mail headers// <!-- include your own success html here -->
+/$headers = 'From: '.$mail_from."\r\n".
+'Reply-To: '.$mail_from."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+mail($mail_to, $mail_subject, $mail_message, $headers);  
 <?php
   include 'connexion.php';
 require 'PHPMailer/PHPMailerAutoload.php';
@@ -39,7 +45,7 @@ $mail->send();
 
 if(isset($_GET['supp1']))
 {
-    $requete2="UPDATE reclamation SET etat=0 WHERE id_reclamation=".$_GET['id_reclamation'];
+    //$requete2="UPDATE reclamation SET etat=0 WHERE id_reclamation=".$_GET['id_reclamation'];
 	$mail->addAddress($_GET['email']);
 	$bodyContent = '<h1>Message Envoyer Par Un Systeme De Reclamation</h1>';
 $bodyContent .= '<p>non <b>Systeme de reclamation</b></p>';

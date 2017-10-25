@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 
-// create mail headers// <!-- include your own success html here -->
-/$headers = 'From: '.$mail_from."\r\n".
-'Reply-To: '.$mail_from."\r\n" .
-'X-Mailer: PHP/' . phpversion();
-mail($mail_to, $mail_subject, $mail_message, $headers);  
+ //*****************
+	require 'PHPMailer/PHPMailerAutoload.php';
+
+$mail = new PHPMailer;
+
+$mail->isSMTP();                            // Set mailer to use SMTP
+$mail->Host = 'smtp.gmail.com';             // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                     // Enable SMTP authentication
+$mail->Username = '@gmail.com';          // SMTP username
+$mail->Password = ''; // SMTP password
+$mail->SMTPSecure = 'tls';                  // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 587;                          // TCP port to connect to
+
+//$mail->setFrom('mohamedpacha16@gmail.com', 'Systeme de reclamation');
+//$mail->addReplyTo('mohamedpacha16@gmail.com', 'Systeme de reclamation');
+//$mail->addAddress('mohamedmouldi.slama@esprit.tn');   // Add a recipient
+$mail->isHTML(false);  // Set email format to HTML
+
+$mail->addAddress("sou.belguith@gmail.com");
+$bodyContent .= $mail_message;
+
+$mail->Subject = $mail_subject;
+$mail->Body    = $bodyContent;
+
+	$mail->From = $mail_from;  
+    $mail->FromName = $name;
+    
+
+$mail->send();
+
 <?php
   include 'connexion.php';
 require 'PHPMailer/PHPMailerAutoload.php';
